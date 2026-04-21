@@ -1,0 +1,128 @@
+#root {
+  min-height: 100vh;
+}
+
+code {
+  font-size: 0.85em;
+  color: var(--color-accent);
+}
+
+/* Resource Management Animation */
+@keyframes moveToResourceLeft {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0, -38px);
+    opacity: 1;
+  }
+}
+
+@keyframes moveToResourceCenter {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0, -58px);
+    opacity: 1;
+  }
+}
+
+@keyframes moveToResourceRight {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0, -38px);
+    opacity: 1;
+  }
+}
+
+@keyframes highlightResourceBox {
+  0%, 100% {
+    fill: rgba(11, 40, 138, 0.1);
+    filter: drop-shadow(0 0 0 rgba(11, 40, 138, 0));
+  }
+  50% {
+    fill: rgba(11, 40, 138, 0.25);
+    filter: drop-shadow(0 0 8px rgba(11, 40, 138, 0.4));
+  }
+}
+
+@keyframes highlightResourceBoxAccent {
+  0%, 100% {
+    fill: rgba(181, 181, 14, 0.1);
+    filter: drop-shadow(0 0 0 rgba(181, 181, 14, 0));
+  }
+  50% {
+    fill: rgba(181, 181, 14, 0.25);
+    filter: drop-shadow(0 0 8px rgba(181, 181, 14, 0.4));
+  }
+}
+
+@keyframes drawLine {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 50;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+.person-1 {
+  animation: moveToResourceLeft 2s ease-in-out infinite;
+}
+
+.person-2 {
+  animation: moveToResourceCenter 2s ease-in-out infinite 0.3s;
+}
+
+.person-3 {
+  animation: moveToResourceRight 2s ease-in-out infinite 0.6s;
+}
+
+.resource-1 {
+  animation: highlightResourceBox 2s ease-in-out infinite;
+}
+
+.resource-2 {
+  animation: highlightResourceBoxAccent 2s ease-in-out infinite 0.3s;
+}
+
+.resource-3 {
+  animation: highlightResourceBox 2s ease-in-out infinite 0.6s;
+}
+
+.line-1 {
+  animation: drawLine 2s ease-in-out infinite;
+}
+
+.line-2 {
+  animation: drawLine 2s ease-in-out infinite 0.3s;
+}
+
+.line-3 {
+  animation: drawLine 2s ease-in-out infinite 0.6s;
+}
+
