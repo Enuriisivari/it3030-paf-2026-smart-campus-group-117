@@ -9,4 +9,3 @@ public enum ResourceType {
 	CAMERA,
 	WHITE_BOARD
 }
-
