@@ -29,12 +29,10 @@ University web platform to manage facility and asset bookings (rooms, labs, equi
 4. Copy the **connection string** (SRV URI) and set it as an environment variable:
 
 ```powershell
-setx MONGODB_URI "mongodb+srv://dewmithinara68:dewmi0817@cluster0.kn0ch.mongodb.net/smartcampus?retryWrites=true&w=majority"
+setx MONGODB_URI "Use_Your_MongoDB_URI"
 ```
 
 The backend uses `spring.data.mongodb.uri` (see `backend/smart-campus-api/src/main/resources/application.properties`).
-
-
 
 <!-- (first time) -->
 <!-- 1. Install and start MySQL.
@@ -151,5 +149,3 @@ npm run dev
 ## CI
 
 GitHub Actions runs backend tests and frontend build on `main` / `develop` (see `.github/workflows/ci.yml`).
-
-
